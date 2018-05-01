@@ -1,0 +1,51 @@
+[role="xpack"]
+[[authorization]]
+== Authorization
+
+{security} introduces the concept of _authorization_ to the {stack}.
+Authorization is the process of determining whether the user behind an incoming
+request is allowed to execute it. This process takes place once a request is
+successfully authenticated and the user behind the request is identified.
+
+The authorization process revolves around the following 5 constructs:
+
+_Secured Resource_::
+A resource to which access is restricted. Indices/aliases, documents, fields,
+users and the {es} cluster itself are all examples of secured objects.
+
+_Privilege_::
+A named group representing one or more actions that a user may execute against a
+secured resource. Each secured resource has its own sets of available privileges.
+For example, `read` is an index privilege that represents all actions that enable
+reading the indexed/stored data. For a complete list of available privileges
+see <<security-privileges>>.
+
+_Permissions_::
+A set of one or more privileges against a secured resource. Permissions can
+easily be described in words, here are few examples:
+ * `read` privilege on the `products` index
+ * `manage` privilege on the cluster
+ * `run_as` privilege on `john` user
+ * `read` privilege on documents that match query X
+ * `read` privilege on `credit_card` field
+
+_Role_::
+A named sets of permissions.
+
+_User_::
+The authenticated user.
+
+[[roles]]
+A secure {es} cluster manages the privileges of users through _roles_.
+A role has a unique name and identifies a set of permissions that translate to
+privileges on resources. A user can be associated with an arbitrary number of
+roles. The total set of permissions that a user has is therefore defined by
+union of the permissions in all its roles.
+
+Roles can be assigned to users in a number of ways depending on the realms by
+which the users are authenticated.
+
+{security} applies a default role to all users, including
+<<anonymous-access, anonymous users>>. The default role enables users to access
+the authenticate endpoint, change their own passwords, and get information about
+themselves. See <<built-in-roles>>.

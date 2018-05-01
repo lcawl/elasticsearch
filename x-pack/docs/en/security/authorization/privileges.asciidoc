@@ -1,5 +1,6 @@
+[role="xpack"]
 [[security-privileges]]
-=== Security Privileges
+=== Privileges and permissions
 
 This section lists the privileges that you can assign to a role.
 
@@ -131,4 +132,4 @@ The `run_as` permission enables an authenticated user to submit requests on
 behalf of another user. The value can be a user name or a comma-separated list
 of user names. (You can also specify users as an array of strings or a YAML
 sequence.) For more information, see
-<<run-as-privilege, Submitting Requests on Behalf of Other Users>>.
+<<run-as-privilege>>.

@@ -20,6 +20,9 @@ realm.
 
 ==== Description
 
+When you use this API to manage roles in the `native` realm, the roles are 
+stored in an internal {es} index. 
+
 The Roles API is generally the preferred way to manage roles, rather than using
 file-based role management. For more information, see
 {xpack-ref}/authorization.html[Configuring Role-based Access Control].

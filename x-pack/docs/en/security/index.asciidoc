@@ -100,7 +100,7 @@ include::how-security-works.asciidoc[]
 
 include::authentication/overview.asciidoc[]
 
-include::authorization.asciidoc[]
+include::authorization/index.asciidoc[]
 
 include::auditing.asciidoc[]
 
