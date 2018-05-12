@@ -740,7 +740,7 @@ The `type` setting must be set to `saml`. In addition to the
 the following settings: 
 
 `idp.entity_id`::
-The Entity ID of the SAML Identity Provider. An Entity ID is a URI with a 
+The Entity ID of the SAML identity provider (IdP). An Entity ID is a URI with a 
 maximum length of 1024 characters. It can be a URL (https://idp.example.com/) or 
 a URN (`urn:example.com:idp`) and can be found in the configuration or the SAML 
 metadata of the Identity Provider.
@@ -782,46 +782,6 @@ The URL of the Single Logout service within {kib}. Typically this is the
 "logout" endpoint of your Kibana server. For example, 
 `https://kibana.example.com/logout`.
 
-`attributes.principal`::
-The Name of the SAML attribute that should be used as the {security} user's
-principal (username).
-
-`attributes.groups`::
-The Name of the SAML attribute that should be used to populate {security}
-user's groups. 
-
-`attributes.name`::
-The Name of the SAML attribute that should be used to populate {security}
-user's full name. 
-
-`attributes.mail`::
-The Name of the SAML attribute that should be used to populate {security}
-user's email address. 
-
-`attributes.dn`::
-The Name of the SAML attribute that should be used to populate {security}
-user's X.500 _Distinguished Name_. 
-
-`attribute_patterns.principal`::
-A Java regular expression that is matched against the SAML attribute specified
-by `attributes.pattern` before it is applied to the user's _principal_ property.
-The attribute value must match the pattern and the value of the first
-_capturing group_ is used as the principal. For example, `^([^@]+)@example\\.com$` 
-matches email addresses from the "example.com" domain and uses the local-part as 
-the principal.
-
-`attribute_patterns.groups`::
-As per `attribute_patterns.principal`, but for the _group_ property.
-
-`attribute_patterns.name`::
-As per `attribute_patterns.principal`, but for the _name_ property.
-
-`attribute_patterns.mail`::
-As per `attribute_patterns.principal`, but for the _mail_ property.
-
-`attribute_patterns.dn`::
-As per `attribute_patterns.principal`, but for the _dn_ property.
-
 `nameid_format`::
 The NameID format that should be requested when asking the IdP to authenticate
 the current user. Defaults to requesting _transient_ names 
@@ -848,6 +808,89 @@ provided by the SAML attributes. Defaults to `true`.
 The maximum amount of skew that can be tolerated between the IdP's clock and the
 {es} node's clock.
 Defaults to `3m` (3 minutes).
+
+[float]
+[[ref-saml-attribute-settings]]
+===== SAML realm attribute settings
+
+SAML realms can be configured to map SAML attributes to the following user 
+properties:
+
+See also <<saml-special-attributes>>. 
+
+`attributes.principal`::
+The name of the SAML attribute that is used as the user's principal (username). 
+This is the username that is applied to a user that authenticates against the 
+realm. This information appears in places such as the {es} audit logs. Required. 
+
+`attributes.groups`::
+The name of the SAML attribute that should be used to populate the user's groups. 
+If you want to use your IdP's concept of groups or roles as the basis for a 
+user's {es} privileges, map them with this attribute. The groups are passed 
+directly to your role mapping rules.
+
+`attributes.name`::
+The name of the SAML attribute that is used to populate the user's full name. 
+
+`attributes.mail`::
+The name of the SAML attribute that is used to populate the user's email address. 
+
+`attributes.dn`::
+The name of the SAML attribute that is used to populate the user's X.500 
+Distinguished Name. 
+
+`attribute_patterns.principal`::
+A Java regular expression that is matched against the SAML attribute specified
+by `attributes.pattern` before it is applied to the user's _principal_ property.
+The attribute value must match the pattern and the value of the first
+_capturing group_ is used as the principal. For example, `^([^@]+)@example\\.com$` 
+matches email addresses from the "example.com" domain and uses the local-part as 
+the principal.
+
+`attribute_patterns.groups`::
+As per `attribute_patterns.principal`, but for the _group_ property.
+
+`attribute_patterns.name`::
+As per `attribute_patterns.principal`, but for the _name_ property.
+
+`attribute_patterns.mail`::
+As per `attribute_patterns.principal`, but for the _mail_ property.
+
+`attribute_patterns.dn`::
+As per `attribute_patterns.principal`, but for the _dn_ property.
+
+[float]
+[[saml-special-attributes]]
+===== SAML special attributes
+
+In general, {es} expects that the configured value for an attribute is a
+URI such as `urn:oid:0.9.2342.19200300.100.1.1`. However, there are some
+additional names that can be used:
+
+`nameid`:: 
+Specifies to use the SAML `NamedID` value instead of a SAML attribute. SAML 
+`NameID` elements are optional (but frequently provided) fields within a SAML 
+assertion, which the IdP can use to identify the subject of the assertion. In 
+some cases, the `NameID` relates to the user's login identifier (username) 
+within the IdP. In many cases, however, they are internally generated 
+identifiers that have no obvious meaning outside of the IdP.
+
+`nameid:persistent`::
+Specifies to use the SAML `NameID` value, but only if the NameID format is
+`urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`. A SAML `NameID` element 
+has an optional `Format` attribute that indicates the semantics of the provided 
+name.  It is common for IdPs to be configured with "transient" NameIDs that 
+present a new identifier for each session. Since it is rarely useful to use a 
+transient NameID as part of an attribute mapping, the "nameid:persistent" 
+attribute name can be used as a safety mechanism that causes an error when you 
+attempt to map from a `NameID` that does not have a persistent value.
+
+_friendlyName_::
+A SAML attribute can have a _friendlyName_ in addition to its URI based name. 
+For example, the attribute with a name of `urn:oid:0.9.2342.19200300.100.1.1` 
+might also have a friendlyName of `uid`. You can use these friendly names within 
+an attribute mapping, but it is recommended that you use the URI based names, 
+since friendlyNames are neither standardized nor mandatory.
 
 [float]
 [[ref-saml-signing-settings]]

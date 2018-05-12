@@ -1,0 +1,35 @@
+[[saml-attributes]]
+==== SAML attributes
+
+When a user connects to {kib} through the identity provider, the identity
+provider supplies a SAML assertion about the user. The assertion contains an 
+authentication statement, which indicates that the user has successfully
+authenticated to the IdP. It also provides one ore more attribute statements,  
+which include attributes for the user.
+
+These attributes can include such things as:
+
+- the user's username
+- the user's email address
+- the user's groups or roles
+
+Attributes in SAML are named by using a URI such as
+`urn:oid:0.9.2342.19200300.100.1.1` or
+`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`. They also have one 
+or more values associated with them.
+
+Attribute identifiers vary between IdPs and most IdPs offer ways to customize 
+the URIs and their associated value.
+
+The {stack} uses these attributes to infer information about the user who has
+logged in. The attributes can also be used for role mapping.
+
+In order for these attributes to be useful, the {stack} and the IdP need to have 
+a common via for the names of the attributes. 
+//TBD: This is unclear. Do then need a common understanding of the names...?
+This is done manually, by
+configuring the IdP and the {security} SAML realm to use the same URI name for
+each logical user attribute. 
+
+For more information, see 
+{ref}/configuring-saml-realm.html#mapping-attributes[Configuring a SAML realm].

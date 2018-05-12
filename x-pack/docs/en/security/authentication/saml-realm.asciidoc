@@ -1,25 +1,37 @@
 [[saml-realm]]
 === SAML authentication
-{security} supports user authentication using SAML Single Sign On.
-{security} provides this support using the Web Browser SSO profile of the SAML
-2.0 protocol.
+
+{security} supports user authentication using Security Assertion Markup Language 
+(SAML) Single Sign On (SSO). {security} provides this support using the Web 
+Browser SSO profile of the SAML 2.0 protocol.
 
 This protocol is specifically designed to support authentication via an
 interactive web browser, so it does not operate as a standard authentication
 realm. Instead, {security} provides features in {kib} and {es} that work
-together to enable interactive SAML sessions.
+together to enable interactive SAML sessions. This means that the SAML realm is 
+not suitable for use by standard REST clients. 
 
-This means that the SAML realm is not suitable for use by standard REST clients.
-If you configure a SAML realm for use in {kib}, you should also configure
+TIP: If you configure a SAML realm for use in {kib}, you should also configure 
 another realm, such as the <<native-realm, native realm>> in your authentication
 chain.
 
-In order to simplify the process of configuring SAML authentication within the
-Elastic Stack, there is a step-by-step guide to
-<<saml-guide, Configuring Elasticsearch and Kibana to use SAML Single-Sign-On>>.
+In SAML terminology, the {stack} is operating as a _service provider_. The other 
+necessary component is the _identity provider_, which is a service that handles 
+your credentials and performs that actual authentication of users.
 
-The remainder of this document will describe {es} specific configuration options
-for SAML realms.
+If you are interested in configuring SSO for {kib}, you must provide {es} with 
+information about your identity provider and you must register the {stack} as 
+a known service provider within that identity provider.  There are also a few 
+configuration changes that are required in {kib} to activate the SAML 
+authentication provider.
+
+NOTE: The SAML support in {kib} is designed on the expectation that it is the 
+primary (or sole) authentication method for users of that {kib} instance. After 
+you enable SAML authentication in {kib}, it affects all users that try to login. 
+The <<saml-kibana>> section provides more detail about how this works.
+
+For more information, see 
+{ref}/configuring-saml-realm.html[Configuring a SAML realm].
 
 [[saml-settings]]
 ==== SAML realm settings
@@ -38,3 +50,4 @@ See {ref}/security-settings.html#ref-saml-encryption-settings[SAML Realm Encrypt
 
 See {ref}/security-settings.html#ref-saml-ssl-settings[SAML Realm SSL Settings]. 
 
+include::saml-attributes.asciidoc[]
