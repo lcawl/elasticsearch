@@ -260,6 +260,12 @@ NOTE: The `field_name` cannot contain double quotes or backslashes.
   (string) The field used to segment the analysis.
   When you use this property, you have completely independent baselines for each value of this field.
 
+`rules`::
+  (object) experimental[] This functionality is experimental and may be changed
+  or removed completely in a future release.
+  Machine learning _ignore policies_ define rules for events that will be
+  ignored. See <<ml-detectorrules,detector rule objects>>.
+
 `use_null`::
   (boolean) Defines whether a new series is used as the null series
   when there is no value for the by or partition fields. The default value is `false`. +
@@ -273,6 +279,91 @@ is different from one named 'bytes'.
 After you create a job, the only property you can change in the detector
 configuration object is the `detector_description`; all other properties are
 informational.
+
+[float]
+[[ml-detectorrules]]
+==== Detector Rules Objects
+
+experimental[]
+
+A {ml} ignore policy is a set of filter rules for a detector. If the specified
+conditions are met, the detector bypasses its normal behavior.
+
+WARNING: If rules are misused, they can severely impact the quality of the
+anomaly detection results. This is an experimental configuration option for
+advanced users.
+
+Each `rules` object has the following properties:
+
+`actions`::
+  (array of strings) The list of actions that are applied when
+  the rule conditions are met. You can specify one or more of the following
+  actions: +
++
+--
+
+* `filter_results`: The detector does not create any anomaly records for the
+time series where the rule conditions apply.
+* `skip_sampling`: The detector does not update the model with the data from the
+time series where the rule conditions apply.
+
+For example, if you know in advance that certain anomalies are not of interest,
+you can use the `filter_results` action to avoid generating anomaly records
+for those circumstances. If you want to prevent the {ml} model from learning
+from the data, you can use the `skip_sampling` action.
+
+--
+
+`target_field_name`::
+  (string) An optional string.
+
+`target_field_value`::
+  (string) An optional string.
+
+`conditions`::
+  (array) An array of rule condition objects. See
+  <<ml-detectorruleconditions,rule condition objects>>.
+
+`conditions_connective`::
+  (string) An optional string that specifies how `conditions` are combined.
+  Valid values are: +
++
+--
+
+* `or`: If any of the conditions are met, the rule applies.
+* `and`: If all of the conditions are met, the rule applies.
+
+The default value is `or`.
+--
+
+[float]
+[[ml-detectorruleconditions]]
+===== Detector Rule Condition Objects
+
+experimental[]
+
+When you define rules for a detector, the `conditions` object specifies the
+circumstances that must be met before the `actions` occur.
+
+Each `conditions` object has the following properties:
+
+`condition`::
+  (object) Optional. Specifies an operator and value.
+  TBD: List of supported operators?
+  For example: `{"operator":"lt","value":"33.3"}`.
+
+`field_name`::
+  (string) The field that the detector uses to check the condition.
+
+`field_value`::
+  (string) Optional. The specific values that are checked.
+
+`filter_id`::
+  (string) Optional. TBD
+
+`type`::
+  (string) TBD
+  Valid values include `"numerical_actual"` and `categorical`.
 
 [float]
 [[ml-datadescription]]
