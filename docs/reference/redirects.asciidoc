@@ -560,3 +560,12 @@ See <<api-definitions>>.
 
 The standard token filter has been removed.
 
+[role="exclude",id="breaking-changes"]
+=== Breaking changes
+
+See <<release-highlights>>.
+
+[role="exclude",id="breaking-changes-7.0"]
+==== Breaking changes in 7.0
+
+See <<breaking-changes-7.0.0>>.

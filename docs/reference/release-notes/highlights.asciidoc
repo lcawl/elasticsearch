@@ -1,15 +1,28 @@
 [[release-highlights]]
-= {es} Release Highlights
-++++
-<titleabbrev>Release Highlights</titleabbrev>
-++++
+= {es} Release highlights & Breaking changes
 
 [partintro]
 --
-This section summarizes the most important changes in each release. For the 
-full list, see <<es-release-notes>> and <<breaking-changes>>. 
+This section summarizes the most important changes in each release. It also 
+describes the changes that you need to be aware of when migrating your 
+application from one version of Elasticsearch to another.
 
-* <<release-highlights-7.0.0>>
+As a general rule:
+
+* Migration between minor versions -- e.g. `7.x` to `7.y` -- can be
+  performed by <<rolling-upgrades,upgrading one node at a time>>.
+
+* Migration between consecutive major versions -- e.g. `6.x` to `7.x` --
+  requires a <<restart-upgrade,full cluster restart>>.
+
+* Migration between non-consecutive major versions -- e.g. `5.x` to `7.x` --
+  is not supported.
+
+For more information, see <<setup-upgrade>>.
+
+For the full list of changes in the release, see <<es-release-notes>>. 
+
+* <<release-7.0.0>>
 
 --
 
