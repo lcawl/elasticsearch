@@ -21,6 +21,7 @@ This example uses `curl` without basic auth to create an index:
 -------------------------------------------------------------------------------
 curl -XPUT 'localhost:9200/idx'
 -------------------------------------------------------------------------------
+// NOTCONSOLE
 
 [source,js]
 -------------------------------------------------------------------------------
@@ -29,6 +30,7 @@ curl -XPUT 'localhost:9200/idx'
   "status": 401
 }
 -------------------------------------------------------------------------------
+// TESTRESPONSE
 
 Since no user is associated with the request above, an authentication error is
 returned. Now we'll use `curl` with basic auth to create an index as the
@@ -38,6 +40,7 @@ returned. Now we'll use `curl` with basic auth to create an index as the
 ---------------------------------------------------------
 curl --user rdeniro:taxidriver -XPUT 'localhost:9200/idx'
 ---------------------------------------------------------
+// NOTCONSOLE
 
 [source,js]
 ---------------------------------------------------------
@@ -45,6 +48,7 @@ curl --user rdeniro:taxidriver -XPUT 'localhost:9200/idx'
   "acknowledged": true
 }
 ---------------------------------------------------------
+// TESTRESPONSE
 
 [float]
 ==== Client Libraries over HTTP

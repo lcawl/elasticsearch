@@ -102,6 +102,7 @@ POST /_xpack/security/role/cluster_two_logs
 }
 -----------------------------------------------------------
 // CONSOLE
+// TEST[skip:license-issues]
 
 On cluster `two`, this role allows the user to query local indices called
 `logs-` from a remote cluster:
@@ -125,6 +126,7 @@ POST /_xpack/security/role/cluster_two_logs
 }
 -----------------------------------------------------------
 // CONSOLE
+// TEST[skip:license-issues]
 
 Finally, create a user on cluster `one` and apply the `cluster_two_logs` role:
 
@@ -140,6 +142,7 @@ POST /_xpack/security/user/alice
 }
 -----------------------------------------------------------
 // CONSOLE
+// TEST[skip:license-issues]
 
 With all of the above setup, the user `alice` is able to search indices in
 cluster `two` as follows:
