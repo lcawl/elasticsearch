@@ -3,4 +3,141 @@
 [[ccr-getting-started]]
 == Getting Started
 
-This is the getting started section of the {ccr} docs.
+beta[]
+
+To set up cross-cluster replication:
+
+. Identify which indices you want to replicate. In these instructions, we'll 
+refer to these as the _leader indices_. 
+
+.. If it is not already running, {ref}/starting-elasticsearch.html[start this {es} cluster].
+
+.. Ensure that the `soft_deletes.enabled` setting is `true` for the leader indices.
++
+--
+//TBD: Add more information about purpose of this setting and how to set it on existing indices.
+
+For example:
+
+[source,js]
+--------------------------------------------------
+PUT server-metrics
+{
+  "settings": {
+    "number_of_shards":1,
+    "number_of_replicas":0,
+    "soft_deletes.enabled": true
+  },
+  "mappings": {
+    "metric": {
+      "properties":{
+        "@timestamp": {
+          "type":"date"
+        },
+        "accept": {
+          "type":"long"
+        },
+        "deny": {
+          "type":"long"
+        },
+        "host": {
+          "type":"keyword"
+        },
+        "response": {
+          "type":"float"
+        },
+        "service": {
+          "type":"keyword"
+        },
+        "total": {
+          "type":"long"
+        }
+      }
+    }
+  }
+}
+--------------------------------------------------
+// CONSOLE 
+--
+
+. Identify where you want to replicate the leader indices. In these instructions, 
+we'll refer to these replicas as the _follower indices_. 
+
+.. If it is not already running, {ref}/starting-elasticsearch.html[start this {es} cluster].
+
+.. Define the remote cluster that contains the leader indices.
++
+--
+For example:
+
+[source,js]
+--------------------------------------------------
+PUT _cluster/settings
+{
+  "persistent": {
+    "cluster": {
+      "remote": {
+        "cluster_one": {
+          "seeds": ["127.0.0.1:9300"]  <1>     
+        }
+      }
+    }
+  }
+}
+--------------------------------------------------
+// CONSOLE 
+<1> Specifies the hostname and TCP transport port of the cluster that contains 
+the leader indices. 
+//TBD: Can the seeds value include multiple hosts and a range of ports?
+
+For more information, see {ref}/modules-remote-clusters.html[Remote clusters].
+--
+
+.. Verify that you've successfully connected to the remote cluster.
++
+--
+For example:
+[source,js]
+--------------------------------------------------
+GET /_remote/info
+--------------------------------------------------
+// CONSOLE 
+
+In particular, you should see that the `num_nodes_connected` value is not zero. 
+
+For more information about this API, see {ref}/cluster-remote-info.html[Remote cluster info].
+--
+
+.. Create the follower indices. 
++
+--
+For example:
+
+[source,js]
+--------------------------------------------------
+PUT /metrics-follower/_ccr/follow
+{
+  "remote_cluster": "cluster_one",
+  "leader_index": "server-metrics"
+}
+--------------------------------------------------
+// CONSOLE 
+--
+
+. Verify your follower indices are populated with data from the leader indices.
++
+--
+For example, compare the size of the leader and follower indices by running the 
+following API on both clusters:
+
+[source,js]
+--------------------------------------------------
+GET _cat/indices
+--------------------------------------------------
+// CONSOLE 
+
+When you add more documents in your leader indices, you should see the size of 
+your follower indices grow as well. 
+
+--
+
