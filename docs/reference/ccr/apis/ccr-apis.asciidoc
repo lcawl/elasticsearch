@@ -31,17 +31,18 @@ You can use the following APIs to perform {ccr} operations.
 * <<ccr-delete-auto-follow-pattern,Delete auto-follow pattern>>
 * <<ccr-get-auto-follow-pattern,Get auto-follow patterns>>
 
-// top-level
-include::get-ccr-stats.asciidoc[]
-
-// follow
-include::follow/put-follow.asciidoc[]
-include::follow/post-pause-follow.asciidoc[]
-include::follow/post-resume-follow.asciidoc[]
-include::follow/post-unfollow.asciidoc[]
-include::follow/get-follow-stats.asciidoc[]
-
-// auto-follow
+// CREATE
 include::auto-follow/put-auto-follow-pattern.asciidoc[]
+include::follow/put-follow.asciidoc[]
+// DELETE
 include::auto-follow/delete-auto-follow-pattern.asciidoc[]
+// GET
 include::auto-follow/get-auto-follow-pattern.asciidoc[]
+include::get-ccr-stats.asciidoc[]
+include::follow/get-follow-stats.asciidoc[]
+// PAUSE
+include::follow/post-pause-follow.asciidoc[]
+// RESUME
+include::follow/post-resume-follow.asciidoc[]
+// UNFOLLOW
+include::follow/post-unfollow.asciidoc[]
