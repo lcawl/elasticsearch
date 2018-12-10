@@ -14,7 +14,7 @@
 
 experimental[]
 
-X-Pack includes a SQL feature to execute SQL against Elasticsearch
+The SQL feature enables you to execute SQL against Elasticsearch
 indices and return results in tabular format.
 
 <<sql-overview, Overview>>::
