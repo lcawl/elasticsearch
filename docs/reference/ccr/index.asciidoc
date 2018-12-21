@@ -1,4 +1,4 @@
-[role="xpack"]
+[role="xpack-pro"]
 [testenv="platinum"]
 [[xpack-ccr]]
 = Cross-cluster replication

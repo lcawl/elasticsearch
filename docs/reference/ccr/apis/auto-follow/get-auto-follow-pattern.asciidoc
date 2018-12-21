@@ -1,4 +1,4 @@
-[role="xpack"]
+[role="xpack-pro"]
 [testenv="platinum"]
 [[ccr-get-auto-follow-pattern]]
 === Get auto-follow pattern API

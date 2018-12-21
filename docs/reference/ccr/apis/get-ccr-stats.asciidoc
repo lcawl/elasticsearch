@@ -1,4 +1,4 @@
-[role="xpack"]
+[role="xpack-pro"]
 [testenv="platinum"]
 [[ccr-get-stats]]
 === Get cross-cluster replication stats API

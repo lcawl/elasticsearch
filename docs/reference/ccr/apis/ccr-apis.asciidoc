@@ -1,4 +1,4 @@
-[role="xpack"]
+[role="xpack-pro"]
 [testenv="platinum"]
 [[ccr-apis]]
 == Cross-cluster replication APIs
