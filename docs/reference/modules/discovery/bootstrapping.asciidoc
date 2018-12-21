@@ -1,5 +1,5 @@
 [[modules-discovery-bootstrap-cluster]]
-=== Bootstrapping a cluster
+==== Bootstrapping a cluster
 
 Starting an Elasticsearch cluster for the very first time requires the initial
 set of <<master-node,master-eligible nodes>> to be explicitly defined on one or
@@ -69,7 +69,7 @@ $ bin/elasticsearch -Ecluster.initial_master_nodes=master-a,master-b,master-c
 --------------------------------------------------
 
 [float]
-==== Choosing a cluster name
+===== Choosing a cluster name
 
 The <<cluster.name,`cluster.name`>> setting enables you to create multiple
 clusters which are separated from each other. Nodes verify that they agree on
@@ -79,7 +79,7 @@ default value for the cluster name is `elasticsearch`, but it is recommended to
 change this to reflect the logical name of the cluster.
 
 [float]
-==== Auto-bootstrapping in development mode
+===== Auto-bootstrapping in development mode
 
 If the cluster is running with a completely default configuration then it will
 automatically bootstrap a cluster based on the nodes that could be discovered to

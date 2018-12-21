@@ -2,10 +2,10 @@
 === Adding and removing nodes
 
 As nodes are added or removed Elasticsearch maintains an optimal level of fault
-tolerance by automatically updating the cluster's _voting configuration_, which
-is the set of <<master-node,master-eligible nodes>> whose responses are counted
-when making decisions such as electing a new master or committing a new cluster
-state.
+tolerance by automatically updating the cluster's 
+<<voting-configurations,voting configuration>>, which defines the nodes that can
+participate in decisions such as electing a new master and committing a new
+cluster state.
 
 It is recommended to have a small and fixed number of master-eligible nodes in a
 cluster, and to scale the cluster up and down by adding and removing

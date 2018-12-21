@@ -3,6 +3,16 @@
 
 Discovery and cluster formation are affected by the following settings:
 
+`cluster.auto_shrink_voting_configuration`::
+
+    Specifies whether the <<voting-configurations,voting configuration>> shrinks
+    automatically. The default value is `true`, which means the voting
+    configuration automatically sheds departed nodes as long as it still
+    contains at least 3 nodes.  If set to `false`, the voting configuration
+    never shrinks automatically; departed nodes must be removed manually using
+    the
+    <<modules-discovery-adding-removing-nodes,voting configuration exclusions API>>.
+
 [[master-election-settings]]`cluster.election.back_off_time`::
 
     Sets the amount to increase the upper bound on the wait before an election
@@ -120,7 +130,7 @@ Discovery and cluster formation are affected by the following settings:
     considering the request to have failed. Defaults to `3s`.    
 
 `discovery.zen.hosts_provider`:: 
-    Specifies which type of <<built-in-hosts-providers,hosts provider>> provides
+    Specifies which type of <<discovery-hosts-providers,hosts provider>> provides
     the list of seed nodes. By default, it is the 
     <<settings-based-hosts-provider,settings-based hosts provider>>.
 

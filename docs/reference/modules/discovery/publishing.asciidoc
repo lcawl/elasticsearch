@@ -1,14 +1,18 @@
 [[cluster-state-publishing]]
 === Publishing the cluster state
 
-The master node is the only node in a cluster that can make changes to the
-cluster state. The master node processes one batch of cluster state updates at
-a time, computing the required changes and publishing the updated cluster state
-to all the other nodes in the cluster. Each publication starts with the master
-broadcasting the updated cluster state to all nodes in the cluster.  Each node
-responds with an acknowledgement but does not yet apply the newly-received
-state. Once the master has collected acknowledgements from enough
-master-eligible nodes, the new cluster state is said to be _committed_ and the
+The <<master-node,master node>> is the only node in a cluster that can make
+changes to the cluster state. The master node processes one batch of cluster
+state updates at a time, computing the required changes and publishing the
+updated cluster state to all the other nodes in the cluster.
+
+The publication process relies on the current
+<<voting-configurations,voting configuration>>, which defines the nodes that can
+participate in committing the cluster state. Each publication starts with the
+master broadcasting the updated cluster state to all nodes in the cluster. Each
+node responds with an acknowledgement but does not yet apply the newly-received
+state. Once the master has collected acknowledgements from a quorum of nodes in
+the voting configuration, the new cluster state is said to be _committed_. The
 master broadcasts another message instructing nodes to apply the now-committed
 state. Each node receives this message, applies the updated state, and then
 sends a second acknowledgement back to the master.
@@ -37,6 +41,6 @@ is removed from the cluster.
 NOTE: Elasticsearch is a peer to peer based system, in which nodes communicate
 with one another directly. The high-throughput APIs (index, delete, search) do
 not normally interact with the master node. The responsibility of the master
-node is to maintain the global cluster state and reassign shards when nodes join or leave
-the cluster. Each time the cluster state is changed, the
-new state is published to all nodes in the cluster as described above.
+node is to maintain the global cluster state and reassign shards when nodes join
+or leave the cluster. Each time the cluster state is changed, the new state is
+published to all nodes in the cluster as described above.

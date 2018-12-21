@@ -1,4 +1,4 @@
-[[modules-discovery]]
+[[modules-discovery-cluster-formation]]
 == Discovery and cluster formation
 
 The discovery and cluster formation module is responsible for discovering
@@ -7,11 +7,16 @@ each time it changes. It is integrated with other modules. For example, all
 communication between nodes is done using the <<modules-transport,transport>>
 module. This module is divided into the following sections:
 
-<<modules-discovery-hosts-providers>>::
+<<modules-discovery>>::
 
     Discovery is the process where nodes find each other when the master is
     unknown, such as when a node has just started up or when the previous
     master has failed.
+
+<<modules-discovery-quorums>>::
+
+    This section describes the detailed design behind the master election and
+    auto-reconfiguration logic.
 
 <<modules-discovery-bootstrap-cluster>>::
 
@@ -20,11 +25,10 @@ module. This module is divided into the following sections:
     discovery settings configured, this is automatically performed by the nodes
     themselves. As this auto-bootstrapping is
     <<modules-discovery-quorums,inherently unsafe>>, running a node in
-    <<dev-vs-prod-mode,production mode>> requires bootstrapping to be
-    explicitly configured via the
-    <<modules-discovery-bootstrap-cluster,`cluster.initial_master_nodes`
-    setting>>.
-
+    <<dev-vs-prod-mode,production mode>> requires bootstrapping to be explicitly
+    configured via the
+    <<modules-discovery-bootstrap-cluster,`cluster.initial_master_nodes` setting>>.
+    
 <<modules-discovery-adding-removing-nodes,Adding and removing master-eligible nodes>>::
 
     It is recommended to have a small and fixed number of master-eligible nodes
@@ -39,26 +43,25 @@ module. This module is divided into the following sections:
 
     Cluster state publishing is the process by which the elected master node
     updates the cluster state on all the other nodes in the cluster.
-
-<<modules-discovery-quorums>>::
-
-    This section describes the detailed design behind the master election and
-    auto-reconfiguration logic.
     
 <<modules-discovery-settings,Settings>>::
 
     There are settings that enable users to influence the discovery, cluster
-    formation, master election and fault detection processes.    
+    formation, master election and fault detection processes.
 
 include::discovery/discovery.asciidoc[]
 
+include::discovery/quorums.asciidoc[]
+
 include::discovery/bootstrapping.asciidoc[]
+
+include::discovery/voting-configurations.asciidoc[]
+
+include::discovery/master-elections.asciidoc[]
 
 include::discovery/adding-removing-nodes.asciidoc[]
 
 include::discovery/publishing.asciidoc[]
-
-include::discovery/quorums.asciidoc[]
 
 include::discovery/fault-detection.asciidoc[]
 

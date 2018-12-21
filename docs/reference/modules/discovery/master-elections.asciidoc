@@ -1,0 +1,21 @@
+[[master-elections]]
+==== Master elections
+
+Nodes that have `node.master` set to `true` (which is its default value) in the 
+`ES_PATH_CONF/elasticsearch.yml` file are eligible to be elected as the 
+<<master-node,_master_ node>>. 
+
+{es} clusters use an election process to choose a master node. This election
+occurs when the cluster starts. It also occurs when an elected master fails.
+The election process relies on the current
+<<voting-configurations,voting configuration>>, which defines the nodes that can
+participate. An election is successful when a sufficient quorum has responded.
+
+Any master-eligible node can start an election and normally the first election
+that takes place succeeds. Elections typically fail only when two nodes start
+their elections at the same time. For this reason, elections are scheduled
+randomly on each node. Nodes retry elections until a master is elected. You can
+use `cluster.election.*` settings to alter the timeouts and _back off times_,
+which is how long a node waits after a failed election before it tries again.
+See <<modules-discovery-settings>>.
+
