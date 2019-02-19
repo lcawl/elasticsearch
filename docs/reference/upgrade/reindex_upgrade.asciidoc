@@ -2,10 +2,9 @@
 == Reindex before upgrading
 
 Elasticsearch can read indices created in the *previous major version*.
-Older indices must be reindexed or deleted. Elasticsearch 6.x
-can use indices created in Elasticsearch 5.x, but not those created in
-Elasticsearch 2.x or before. Elasticsearch 5.x can use indices created in
-Elasticsearch 2.x, but not those created in 1.x or before.
+Older indices must be reindexed or deleted. Elasticsearch 8.x
+can use indices created in Elasticsearch 7.x, but not those created in
+Elasticsearch 6.x or earlier releases.
 
 Elasticsearch nodes will fail to start if incompatible indices are present.
 
