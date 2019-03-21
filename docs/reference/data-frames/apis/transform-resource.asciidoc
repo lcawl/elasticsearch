@@ -1,0 +1,40 @@
+[role="xpack"]
+[testenv="basic"]
+[[transform-resource]]
+=== {dataframe-transforms-cap} resources
+
+A transform resource has the following properties:
+
+`dest`::
+ (string) The destination index.
+
+`id`::
+  (string) The unique identifier for the job. This identifier can contain
+  lowercase alphanumeric characters (a-z and 0-9), hyphens, and underscores. It
+  must start and end with alphanumeric characters. This property is
+  informational; you cannot change the identifier for existing
+  {dataframe-transforms}.
+  
+`pivot`::
+    (object) The `group by` fields and the aggregation that reduce the data. See
+    <<transform-pivotconfig>>.
+  
+`query`::
+  (object) An optional query to select data from the source. By default, it is a
+  `match_all` query. 
+
+`source`::
+  (string) The source index or index pattern.
+  
+  
+[[transform-pivotconfig]]
+==== Pivot configuration objects
+
+A pivot configuration object has the following properties:
+
+`aggregations`::
+  (object) The aggregations for the group fields. See <<search-aggregations>>.
+
+`group_by`::
+  (object) The group by and destination fields that are produced by the pivot
+  function.

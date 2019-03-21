@@ -1,0 +1,58 @@
+[role="xpack"]
+[testenv="basic"]
+[[transform-resource-stats]]
+=== {dataframe-transforms-cap} statistics
+
+The <<get-data-frame-transform-stats,get {dataframe-transform} statistics API>>
+provides information about the operational progress of a {dataframe-transform}.
+
+`id`::
+  (string) TBD
+
+`state`::
+  (object) TBD. See <<transform-state>>.
+
+`generation`:: TBD 
+
+`stats`::
+  (object) TBD. See <<transform-stats>>.
+
+[float]
+[[transform-state]]
+==== {dataframe-transforms-cap} state objects
+
+//The `state` object...
+
+`transform_state`:: 
+  (string) The status of the {dataframe-transform}, which can be one of the
+  following values:
+  `started`::: TBD
+
+`current_position`::
+  (object) TBD
+
+[float]
+[[transform-stats]]
+==== {dataframe-transforms-cap} stats objects
+
+//The `stats` object...
+
+`documents_indexed`:: TBD
+
+`documents_processed`:: TBD
+
+`index_failures`:: TBD
+
+`index_time_in_ms`:: TBD
+
+`index_total`:: TBD
+
+`pages_processed`:: TBD
+
+`search_failures`:: TBD
+
+`search_time_in_ms`:: TBD
+
+`search_total`:: TBD
+
+`trigger_count`:: TBD
