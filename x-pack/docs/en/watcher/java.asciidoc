@@ -10,6 +10,7 @@ To obtain a `WatcherClient` instance, make sure you first set up the
 `XPackClient`.
 
 [float]
+[[installing_xpackclient]]
 === Installing XPackClient
 
 You first need to make sure the +x-pack-transport-{version}+ JAR file is in the classpath.
@@ -76,6 +77,7 @@ You can also download the https://artifacts.elastic.co/maven/org/elasticsearch/c
 manually, directly from our Maven repository.
 
 [float]
+[[obtaining_watcherclient]]
 === Obtaining the `WatcherClient`
 
 To obtain an instance of the `WatcherClient` you first need to create the
