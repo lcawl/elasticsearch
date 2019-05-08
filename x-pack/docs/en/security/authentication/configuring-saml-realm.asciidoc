@@ -1,6 +1,6 @@
 [role="xpack"]
 [[configuring-saml-realm]]
-=== Configuring a SAML realm
+=== Configuring SAML realms
 
 The {stack} supports Security Assertion Markup Language Single Sign On (SAML SSO) 
 into {kib} with {es} as a backend service. In particular, the {stack} supports 

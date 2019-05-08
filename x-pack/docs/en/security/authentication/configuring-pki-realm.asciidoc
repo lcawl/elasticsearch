@@ -1,6 +1,6 @@
 [role="xpack"]
 [[configuring-pki-realm]]
-=== Configuring a PKI realm
+=== Configuring PKI realms
 
 You can configure {es} to use Public Key Infrastructure (PKI) certificates
 to authenticate users. This requires clients to present X.509 certificates.
@@ -19,7 +19,7 @@ authenticating HTTP traffic using username and password credentials. You can
 also set `xpack.security.transport.ssl.client_authentication` to `optional` to 
 allow clients without certificates to authenticate with other credentials.
 
-IMPORTANT:  You must enable SSL/TLS and enable client authentication to use PKI.
+IMPORTANT: You must enable SSL/TLS and enable client authentication to use PKI.
 
 For more information, see {stack-ov}/pki-realm.html[PKI User Authentication].
 

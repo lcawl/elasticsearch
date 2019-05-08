@@ -1,13 +1,16 @@
 [role="xpack"]
 [[configuring-ad-realm]]
-=== Configuring an Active Directory realm
+=== Configuring Active Directory realms
 
 You can configure {es} to communicate with Active Directory to authenticate
 users. To integrate with Active Directory, you configure an `active_directory`
 realm and map Active Directory users and groups to roles in the role mapping file.
 
+TIP: The types of authentication realms that you can enable vary according to
+your subscription. For more information, see {subscriptions}.
+
 For more information about Active Directory realms, see 
-{stack-ov}/active-directory-realm.html[Active Directory User Authentication].
+{stack-ov}/active-directory-realm.html[Active Directory user authentication].
 
 . Add a realm configuration of type `active_directory` to `elasticsearch.yml`
 under the `xpack.security.authc.realms.active_directory` namespace.
@@ -243,5 +246,5 @@ include extra properties in the user's metadata.
 --
 By default, `ldap_dn` and `ldap_groups` are populated in the user's metadata. 
 For more information, see 
-{xpack-ref}/active-directory-realm.html#ad-user-metadata[User Metadata in Active Directory Realms]. 
+{stack-ov}/active-directory-realm.html#ad-user-metadata[User Metadata in Active Directory Realms]. 
 --

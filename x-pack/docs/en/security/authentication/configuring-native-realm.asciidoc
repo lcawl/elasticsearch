@@ -15,6 +15,9 @@ Explicitly configuring a native realm enables you to set the order in which it
 appears in the realm chain, temporarily disable the realm, and control its
 cache options.
 
+TIP: The types of authentication realms that you can enable vary according to
+your subscription. For more information, see {subscriptions}.
+
 . Add a realm configuration to `elasticsearch.yml` under the
 `xpack.security.authc.realms.native` namespace. It is recommended that you
 explicitly set the `order` attribute for the realm. 
