@@ -13,6 +13,29 @@ IP filtering, and auditing.
 
 --
 
-include::overview.asciidoc[]
+include::{xes-repo-dir}/security/overview.asciidoc[]
+
+include::{xes-repo-dir}/security/how-security-works.asciidoc[]
 
 include::{xes-repo-dir}/security/configuring-es.asciidoc[]
+
+include::{xes-repo-dir}/security/authentication/index.asciidoc[]
+
+include::{xes-repo-dir}/security/authorization/index.asciidoc[]
+
+include::{xes-repo-dir}/security/auditing/index.asciidoc[]
+
+include::{xes-repo-dir}/security/securing-communications.asciidoc[]
+
+include::{xes-repo-dir}/security/using-ip-filtering.asciidoc[]
+
+include::{xes-repo-dir}/security/ccs-clients-integrations.asciidoc[]
+
+include::{xes-repo-dir}/security/get-started-security.asciidoc[]
+
+include::{xes-repo-dir}/security/securing-communications/tutorial-tls-intro.asciidoc[]
+
+include::{xes-repo-dir}/security/troubleshooting.asciidoc[]
+
+include::{xes-repo-dir}/security/limitations.asciidoc[]
+
