@@ -15,7 +15,7 @@ the secure settings store.
 
 To pass this bootstrap check, you must set the `xpack.watcher.encryption_key`
 on each node in the cluster. For more information, see
-<<encrypting-data>>.
+{stack-ov}/encrypting-data.html[Encrypting sensitive data in {watcher}].
 
 [float]
 === PKI realm check

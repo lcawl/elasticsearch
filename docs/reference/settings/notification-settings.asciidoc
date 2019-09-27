@@ -28,13 +28,13 @@ Set to `false` to disable {watcher} on the node.
 Set to `true` to encrypt sensitive data. If this setting is enabled, you
 must also specify the `xpack.watcher.encryption_key` setting. For more
 information, see
-{xpack-ref}/encrypting-data.html[Encrypting sensitive data in {watcher}].
+{stack-ov}/encrypting-data.html[Encrypting sensitive data in {watcher}].
 
 `xpack.watcher.encryption_key` (<<secure-settings,Secure>>)::
 Specifies the path to a file that contains a key for encrypting sensitive data.
 If `xpack.watcher.encrypt_sensitive_data` is set to `true`, this setting is
 required. For more information, see
-{xpack-ref}/encrypting-data.html[Encrypting sensitive data in {watcher}].
+{stack-ov}/encrypting-data.html[Encrypting sensitive data in {watcher}].
 
 `xpack.watcher.history.cleaner_service.enabled`::
 added:[6.3.0,Default changed to `true`.]
