@@ -1,7 +1,6 @@
 ==== {component} TLS/SSL Settings
 You can configure the following TLS/SSL settings. If the settings are not configured,
-the {ref}/security-settings.html#ssl-tls-settings[Default TLS/SSL Settings]
-are used.
+the <<ssl-tls-settings,default TLS/SSL settings>> are used.
 
 ifdef::server[]
 +{ssl-prefix}.ssl.enabled+::
@@ -50,7 +49,8 @@ ifndef::server[]
 A private key and certificate are optional and would be used if the server requires client authentication for PKI
 authentication.
 endif::server[]
-If none of the settings below are specified, the {ref}/security-settings.html#ssl-tls-settings[Default TLS/SSL Settings] are used.
+If none of the settings below are specified, the
+<<ssl-tls-settings,default TLS/SSL settings>> are used.
 
 
 ===== PEM Encoded Files

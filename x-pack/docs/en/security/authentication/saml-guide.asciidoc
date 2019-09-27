@@ -89,8 +89,7 @@ If your {es} cluster is operating in production mode, then you must
 configure the HTTP interface to use SSL/TLS before you can enable SAML
 authentication.
 
-For more information, see
-{ref}/configuring-tls.html#tls-http[Encrypting HTTP Client Communications].
+For more information, see <<tls-http>>.
 
 [[saml-enable-token]]
 ==== Enable the token service

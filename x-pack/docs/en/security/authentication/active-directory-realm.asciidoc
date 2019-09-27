@@ -76,5 +76,4 @@ the `metadata` setting on the Active Directory realm.
 [[active-directory-ssl]]
 ==== Setting up SSL between Elasticsearch and Active Directory
 
-See 
-{ref}/configuring-tls.html#tls-active-directory[Encrypting communications between {es} and Active Directory].
+See <<tls-active-directory>>.

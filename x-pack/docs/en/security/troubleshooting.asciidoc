@@ -95,7 +95,7 @@ scenarios.
 | _group to role mapping_|
 
 Either the `role_mapping.yml` file or the location for this file could be
-misconfigured. For more information, see {ref}/security-files.html[Security files].
+misconfigured. For more information, see <<security-files>>.
 
 |_role definition_|
 

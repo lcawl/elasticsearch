@@ -84,5 +84,4 @@ with the <<mapping-roles-api, role mapping API>> or in
 [[ldap-ssl]]
 ==== Setting up SSL between Elasticsearch and LDAP
 
-See
-{ref}/configuring-tls.html#tls-ldap[Encrypting communications between {es} and LDAP]. 
+See <<tls-ldap>>. 
