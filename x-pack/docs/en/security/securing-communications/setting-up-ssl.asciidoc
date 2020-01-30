@@ -14,31 +14,22 @@ is to ensure that data cannot be read, relayed, or altered by attackers as it is
 transferred. You can use TLS to encrypt the following types of communication in
 the {stack}:
 
-* <<tls-transport,Internode-communication>> over the transport protocol in the
-{es} cluster.
-* Communication between clients and the cluster over the HTTP protocol. For
-example, see <<tls-http>> and
-{java-rest}/_encrypted_communication.html[Encrypted communication in the Java low level REST client].
-* {kibana-ref}/using-kibana-with-security.html[Communication between {kib} and the cluster]
-over the HTTP protocol.
-* {logstash-ref}/ls-security.html#ls-http-ssl[Communication between {ls} and the cluster]
-over the HTTP protocol
-* Communication between Beats and the cluster over the HTTP protocol. For
-example, see
-{filebeat-ref}/beats-tls.html[Configure {filebeat} to use encrypted connections].
-* Communication between Beats and {ls}. For example, see
-{filebeat-ref}/configuring-ssl-logstash.html[Secure communication with {ls}].
-* <<tls-ldap,Communication between {es} and LDAP servers>> for user authentication.
-* <<tls-active-directory,Communication between {es} and Active Directory servers>>
-for user authentication.
-* <<cross-cluster-configuring,Communication between remote clusters>> for {ccs}
-or {ccr}.
-* <<monitoring-production,Communication with the monitoring cluster>> for
-{stack} {monitor-features}.
-* <<actions-email,Communication between {es} and mail servers>> for
-{alert-features} such as notifications over the SMTP protocol
-* {hadoop-ref}/security.html[Communication between Apache Hadoop and {es}].
- 
+* Internode-communication over the transport protocol in the {es} cluster.footnote:[<<tls-transport>>]
+* Communication between clients and the cluster over the HTTP protocol.footnote:[For example, see <<tls-http>> and {java-rest}/_encrypted_communication.html[Encrypted communication in the Java low level REST client].]
+* Communication between {kib} and the cluster over the HTTP protocol.footnote:[{kibana-ref}/using-kibana-with-security.html[Configuring security in {kib}]]
+* Communication between {ls} and the cluster over the HTTP protocol
+footnote:[{logstash-ref}/ls-security.html#ls-http-ssl[Configuring {ls} to use TLS encryption]]
+* Communication between Beats and the cluster over the HTTP protocol.footnote:[For example, see {filebeat-ref}/beats-tls.html[Configure {filebeat} to use encrypted connections].]
+* Communication between Beats and {ls}.footnote:[For example, see {filebeat-ref}/configuring-ssl-logstash.html[Secure communication with {ls}].]
+* Communication between {es} and LDAP servers for user authentication.footnote:[<<tls-ldap>>]
+* Communication between {es} and Active Directory servers for user
+authentication.footnote:[<<tls-active-directory>>]
+* Communication between remote clusters>> for {ccs} or {ccr}. footnote:[<<cross-cluster-configuring>>]
+* Communication with the monitoring cluster for {stack} {monitor-features}.footnote:[<<monitoring-production>>]
+* Communication between {es} and mail servers for {alert-features} such as
+notifications over the SMTP protocol.footnote:[<<actions-email>>]
+* Communication between Apache Hadoop and {es}.footnote:[{hadoop-ref}/security.html[Security in {es} for Apache Hadoop]]
+
 At a minimum, if the {es} {security-features} are enabled, you must configure
 TLS for internode-communication. Otherwise, unless you have a trial license, you
 fail the <<bootstrap-checks-tls,TLS bootstrap check>>.
