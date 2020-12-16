@@ -60,6 +60,8 @@ IMPORTANT:  You must use {kib} or this API to create a {transform}.
             privileges on `.transform-internal*` indices. If you used transforms
             prior 7.5, also do not give users any privileges on
             `.data-frame-internal*` indices.
+            
+You must provide either a `pivot` object or a `latest` object.
 
 [[put-transform-path-parms]]
 == {api-path-parms-title}
@@ -106,9 +108,29 @@ include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=dest-pipeline]
 (Optional, <<time-units, time units>>)
 include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=frequency]
 
+//Begin latest
+`latest`::
+(Required^*^, object)
+include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=latest]
++
+.Properties of `latest`
+[%collapsible%open]
+====
+
+`sort`:::
+(Required, string)
+include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=latest-sort]
+
+`unique_key`:::
+(Required, string)
+include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=latest-key]
+
+====
+//End latest
+
 //Begin pivot
 `pivot`::
-(Required, object)
+(Required^*^, object)
 include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=pivot]
 +
 .Properties of `pivot`

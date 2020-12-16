@@ -47,6 +47,8 @@ might result in poor mappings. As a work-around, create the destination index
 or an index template with your preferred mappings before you start the
 {transform}.
 
+You must provide either a `pivot` object or a `latest` object.
+
 [role="child_attributes"]
 [[preview-transform-request-body]]
 == {api-request-body-title}
@@ -77,9 +79,29 @@ include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=dest-pipeline]
 (Optional, <<time-units, time units>>)
 include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=frequency]
 
+//Begin latest
+`latest`::
+(Required^*^, object)
+include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=latest]
++
+.Properties of `latest`
+[%collapsible%open]
+====
+
+`sort`:::
+(Required, string)
+include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=latest-sort]
+
+`unique_key`:::
+(Required, string)
+include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=latest-key]
+
+====
+//End latest
+
 //Begin pivot
 `pivot`::
-(Required, object)
+(Required^*^, object)
 include::{es-repo-dir}/rest-api/common-parms.asciidoc[tag=pivot]
 +
 .Properties of `pivot`

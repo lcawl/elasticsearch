@@ -523,6 +523,20 @@ Comma-separated list or wildcard expression of component template names
 used to limit the request.
 end::component-template[]
 
+tag::latest[]
+//TBD
+A method for transforming the data, which finds the latest document for each
+unique key.
+end::latest[]
+
+tag::latest-key[]
+//TBD
+end::latest-key[]
+
+tag::latest-sort[]
+//TBD
+end::latest-sort[]
+
 tag::lenient[]
 `lenient`::
 (Optional, Boolean) If `true`, format-based query failures (such as
@@ -651,8 +665,9 @@ processed in batches instead of individually.
 end::pages-processed[]
 
 tag::pivot[]
-The method for transforming the data. These objects define the pivot function
-`group by` fields and the aggregation to reduce the data.
+A method for transforming the data, which aggregates and groups the data. These 
+objects define the pivot function `group by` fields and the aggregation to
+reduce the data.
 end::pivot[]
 
 tag::pivot-aggs[]
