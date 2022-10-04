@@ -1,0 +1,23 @@
+[role="exclude",id="apis"]
+= APIs
+
+[partintro]
+--
+
+preview::[]
+
+These APIs are documented using the OpenAPI specification. The current supported
+version of the specification is 3.0. For more information, go to https://openapi-generator.tech/[OpenAPI Generator]
+
+--
+
+[[elasticsearch-apis]]
+== Elasticsearch APIs
+
+preview::[]
+
+////
+This file includes content that has been generated from https://github.com/elastic/elasticsearch-specification. Any modifications required must be done in that open API specification.
+////
+
+include::apis-passthru.asciidoc[]
