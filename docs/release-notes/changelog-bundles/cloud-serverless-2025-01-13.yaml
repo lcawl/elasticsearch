@@ -1,49 +1,166 @@
-products:
+﻿products:
 - product: cloud-serverless
   target: 2025-01-13
+  lifecycle: ga
 entries:
 - file:
-    name: 1768378635-[inference-api]-include-rerank-in-supported-tasks-.yaml
-    checksum: 94aac992578b3ea227746a57c186a3bf9cc26ebe
+    name: 140101.yaml
+    checksum: 15eca03c1fc10dffb3b75098a81676d87c796394
+  type: feature
+  title: 'ESQL: Add timezone to add and sub operators, and ConfigurationAware planning support'
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - ES|QL
+  pr: https://github.com/elastic/elasticsearch/pull/140101
 - file:
-    name: 1768378626-fix-read-write-counts-for-copy-in-repo-analysis.yaml
-    checksum: c7fa74edba48d286e13bc4e456f0f4a6f6a7c2ee
+    name: 140301.yaml
+    checksum: 0ef5bc36f05db99b4048b99b60fbd32091e21bd7
+  type: bug-fix
+  title: Disable _delete_by_query and _update_by_query for CCS/stateful
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - Reindex
+  pr: https://github.com/elastic/elasticsearch/pull/140301
 - file:
-    name: 1768378638-[es|ql]-convert-`packedvaluesblockhash.bytes`-to-`.yaml
-    checksum: 9aa50aef7201374b379fa0276da94fabc59e7598
+    name: 140086.yaml
+    checksum: fd0ef0e8b6147ca4e648e6ded5fa2d50fb200bc3
+  type: bug-fix
+  title: Fix read/write counts for copy in repo analysis
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - Snapshot and restore
+  pr: https://github.com/elastic/elasticsearch/pull/140086
 - file:
-    name: 1768378631-[docs]-add-api-reference-links-to-longform-elastic.yaml
-    checksum: 7a0c17544455c2934a023bfd23b35d8b6722b678
+    name: 139835.yaml
+    checksum: 4912baeea8dc1c2c4e87597ec6dd3bd811a0f7d3
+  type: enhancement
+  title: DiskBBQ tail centroids should always be block encoded too
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - Vector search
+  pr: https://github.com/elastic/elasticsearch/pull/139835
 - file:
-    name: 1768378635-disable-_delete_by_query-and-_update_by_query-for-.yaml
-    checksum: 4b7f3bef0254c0368a552f4fb4ed70df936ffd00
+    name: 140275.yaml
+    checksum: c3d7de6b4b9797c88682f264561052d5a7fb91b9
+  type: docs
+  title: Applies_to syntax changes
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  pr: https://github.com/elastic/elasticsearch/pull/140275
 - file:
-    name: 1768378632-diskbbq-tail-centroids-should-always-be-block-enco.yaml
-    checksum: 8bb5069b15dd63a1b540d88f35a12776370708ba
+    name: 140331.yaml
+    checksum: b303a4b151c0f80757c954deca8ca7c424708d37
+  type: bug-fix
+  title: Include rerank in supported tasks for IBM watsonx integration
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - Inference
+  pr: https://github.com/elastic/elasticsearch/pull/140331
 - file:
-    name: 1768378633-[docs]-applies_to-syntax-changes.yaml
-    checksum: f922bf446f56c03bb80cc3e4ded44b89a86a5fa6
+    name: 140171.yaml
+    checksum: 70cf07185d2618731d0ca62ffedf8050696197cc
+  type: enhancement
+  title: Convert `PackedValuesBlockHash.bytes` to `BreakingBytesRefBuilder` for better memory tracking
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - ES|QL
+  pr: https://github.com/elastic/elasticsearch/pull/140171
 - file:
-    name: 1768378627-always-log-connection-failure-at-warn-level-for-sn.yaml
-    checksum: 38d9d0164a207cd3f32a8885a53f6b3c3c8d55a0
+    name: 140385.yaml
+    checksum: 8de88112f494287341a03405ee0100f233708d45
+  type: bug-fix
+  title: "Bugfix: Deleted async search won't show on any API"
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - Search
+  pr: https://github.com/elastic/elasticsearch/pull/140385
 - file:
-    name: 1768378634-bugfix-deleted-async-search-wont-show-on-any-api.yaml
-    checksum: dffba59d4a8def8f63e1ecdaaadd3e5b376cd4d4
+    name: 140149.yaml
+    checksum: d7c9032401fd9e4d5a9898cf746aa103bdc56cb6
+  type: enhancement
+  title: Always log connection failure at WARN level for sniffed node
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - Network
+  pr: https://github.com/elastic/elasticsearch/pull/140149
 - file:
-    name: 1768378629-retrieve-routing-hash-from-synthetic-id-for-transl.yaml
-    checksum: b2a3304cd93d690947c99407f338bd29d687083d
+    name: 139314.yaml
+    checksum: 612614a26a36cfd60b0f236d4ddea4da950e2cdb
+  type: enhancement
+  title: 'ESQL: Improve Lookup Join performance with CachedDirectoryReader'
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - ES|QL
+  pr: https://github.com/elastic/elasticsearch/pull/139314
 - file:
-    name: 1768378637-esql-improve-lookup-join-performance-with-cacheddi.yaml
-    checksum: f565cd926e3250e5936e456df7d02d620d27e362
+    name: 140221.yaml
+    checksum: 5597f09dadc7a08928de4edb555e720bef3f8ea5
+  type: bug-fix
+  title: Retrieve routing hash from synthetic id for translog operations
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - TSDB
+  pr: https://github.com/elastic/elasticsearch/pull/140221
 - file:
-    name: 1768378636-esql-add-timezone-to-add-and-sub-operators,-and-co.yaml
-    checksum: c4e9f43cb30ab3bb359c573b6217bfa398a136cc
+    name: 139908.yaml
+    checksum: 4acf2660c3f32dce9e06192ec20339b5e65c1165
+  type: enhancement
+  title: 'ES|QL: add syntax support and parsing for SET approximate'
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - ES|QL
+  pr: https://github.com/elastic/elasticsearch/pull/139908
 - file:
-    name: 1768378628-es|ql-add-syntax-support-and-parsing-for-set-appro.yaml
-    checksum: ae8fc64039b38d1618baa02f6ba21b1a9ab5e8ba
+    name: 140094.yaml
+    checksum: 6c6edad199c40a5fe127bc300828bd3f669ebffa
+  type: enhancement
+  title: 'Dense vector docvalues: add base64 format'
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - Vector search
+  pr: https://github.com/elastic/elasticsearch/pull/140094
 - file:
-    name: 1768378630-improve-locality-by-placing-parent---child-centroi.yaml
-    checksum: 0bace95e5efe98f3650e098e209cff02de10f866
+    name: 138466.yaml
+    checksum: d3af179d7771f84c83d116597a75e7552f814481
+  type: docs
+  title: Add API reference links to longform Elasticsearch REST examples
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  pr: https://github.com/elastic/elasticsearch/pull/138466
 - file:
-    name: 1768378628-dense-vector-docvalues-add-base64-format.yaml
-    checksum: 7327a304fb866d5b047bd3b15c9df3f7dcfb1906
+    name: 140293.yaml
+    checksum: 62feb70f5b62d05d743a8dc255de94c7f550d18f
+  type: enhancement
+  title: Improve locality by placing parent - child centroids next to each other
+  products:
+  - product: cloud-serverless
+    target: 2025-01-13
+  areas:
+  - Vector search
+  pr: https://github.com/elastic/elasticsearch/pull/140293

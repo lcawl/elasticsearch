@@ -1,4 +1,4 @@
-##### Required fields #####
+﻿##### Required fields #####
 
 # title:
 #   A required string that is a short, user-facing headline.
@@ -7,13 +7,13 @@
 # type:
 #   A required string that contains the type of change
 #   It can be one of:
-#   - feature
-#   - enhancement
-#   - bug-fix
-#   - known-issue
 #   - breaking-change
+#   - bug-fix
 #   - deprecation
 #   - docs
+#   - enhancement
+#   - feature
+#   - known-issue
 #   - regression
 #   - security
 #   - other
@@ -81,9 +81,11 @@
 #   - security
 #   - other
 
-pr: https://github.com/elastic/elasticsearch/pull/138466
-type: docs
+pr: https://github.com/elastic/elasticsearch/pull/140149
+type: enhancement
 products:
 - product: cloud-serverless
   target: 2025-01-13
-title: '[DOCS]: Add API reference links to longform Elasticsearch REST examples'
+areas:
+- Network
+title: Always log connection failure at WARN level for sniffed node
