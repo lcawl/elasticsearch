@@ -208,13 +208,13 @@ block:
           - docs
 
 # Bundle configuration (profiles and defaults)
-# bundle:
+bundle:
   # Input directory containing changelog YAML files
   # directory: docs/changelog
   # Output directory for bundled changelog files
   # output_directory: docs/releases
   # Whether to resolve (copy contents) by default
-  # resolve: true
+  resolve: true
 
   # Named bundle profiles for different release scenarios
   # profiles:
