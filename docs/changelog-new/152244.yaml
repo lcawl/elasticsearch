@@ -1,0 +1,13 @@
+prs:
+- https://github.com/elastic/elasticsearch/pull/152244
+issues:
+- https://github.com/elastic/elasticsearch/issues/152196
+type: bug-fix
+products:
+- product: cloud-serverless
+  target: 2026-07-21
+- product: elasticsearch
+  target: 9.6.0
+areas:
+- ES|QL
+title: Fix KNN with partially mapped fields in ES|QL

@@ -1,0 +1,13 @@
+prs:
+- https://github.com/elastic/elasticsearch/pull/153296
+issues:
+- https://github.com/elastic/esql-planning/issues/997
+type: bug-fix
+products:
+- product: cloud-serverless
+  target: 2026-07-21
+- product: elasticsearch
+  target: 9.6.0
+areas:
+- ES|QL
+title: Makes ENRICH scope local to subqueries

@@ -1,0 +1,9 @@
+prs:
+- https://github.com/elastic/elasticsearch/pull/152360
+type: docs
+products:
+- product: cloud-serverless
+  target: 2026-07-21
+- product: elasticsearch
+  target: 9.6.0
+title: Update `mv_intersects` page to be available in v9.4

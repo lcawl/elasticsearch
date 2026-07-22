@@ -1,0 +1,13 @@
+prs:
+- https://github.com/elastic/elasticsearch/pull/153688
+issues:
+- https://github.com/elastic/elasticsearch/issues/144860
+type: bug-fix
+products:
+- product: cloud-serverless
+  target: 2026-07-21
+- product: elasticsearch
+  target: 9.6.0
+areas:
+- Inference
+title: 'Fix associating an inference endpoint to an ML node deployment'

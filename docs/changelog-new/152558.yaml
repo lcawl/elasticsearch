@@ -1,0 +1,11 @@
+prs:
+- https://github.com/elastic/elasticsearch/pull/152558
+type: bug-fix
+products:
+- product: cloud-serverless
+  target: 2026-07-21
+- product: elasticsearch
+  target: 9.6.0
+areas:
+- CCS
+title: Update search cluster metadata for successful queries

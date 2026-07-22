@@ -1,0 +1,13 @@
+prs:
+- https://github.com/elastic/elasticsearch/pull/153825
+issues:
+- https://github.com/elastic/kibana/issues/277613
+type: bug-fix
+products:
+- product: cloud-serverless
+  target: 2026-07-21
+- product: elasticsearch
+  target: 9.6.0
+areas:
+- ES|QL
+title: Corrects bug with LOOKUP JOIN, empty scopes and security enabled
