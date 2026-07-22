@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - CCS
-title: Update search cluster metadata for successful queries
+title: Fix incomplete cluster metadata for successful cross-cluster search queries

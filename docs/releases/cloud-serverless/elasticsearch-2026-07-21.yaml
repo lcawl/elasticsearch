@@ -1,0 +1,642 @@
+products:
+- product: cloud-serverless
+  target: 2026-07-21
+  repo: elasticsearch
+  owner: elastic
+release-date: 2026-07-21
+entries:
+- file:
+    name: 154027.yaml
+    checksum: 219f09694f89cfa6d29dc2c99e15aea6168bab41
+  type: bug-fix
+  title: Fix slow KNN queries when filters rewrite to match-all on constant keyword fields
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Vector search
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154027
+- file:
+    name: 153469.yaml
+    checksum: e62be281f79174f0d9279f0177e9c8d98d05d421
+  type: bug-fix
+  title: Fix query failures from excessive Parquet declared-coercion warnings
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153469
+  issues:
+  - '# PRIVATE: https://github.com/elastic/esql-planning/issues/1125'
+- file:
+    name: 153296.yaml
+    checksum: bb15f2804b3735625ad377f759d95e85044b06a6
+  type: bug-fix
+  title: Fix `ENRICH` policy resolution scope in subqueries
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153296
+  issues:
+  - '# PRIVATE: https://github.com/elastic/esql-planning/issues/997'
+- file:
+    name: 153392.yaml
+    checksum: ec4c77c252558f13fde6910726fc0048bf5dd6c7
+  type: bug-fix
+  title: Fix `BUCKET` with very large bucket counts
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153392
+  issues:
+  - https://github.com/elastic/elasticsearch/issues/153389
+- file:
+    name: 154115.yaml
+    checksum: 97f0e29440f058e4e4f44a8e1ccd6b905eae74ea
+  type: other
+  title: Upgrade the version of `log4j` to 2.26.1
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Security
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154115
+- file:
+    name: 153540.yaml
+    checksum: cef355f1dbef78909139918bb138dd349299ceab
+  type: bug-fix
+  title: Fix data loss when text columns widen across external dataset files
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153540
+  issues:
+  - '# PRIVATE: https://github.com/elastic/esql-planning/issues/1149'
+- file:
+    name: 154207.yaml
+    checksum: 9a9f82c92f625d7679d7d76dced2d261adc49853
+  type: enhancement
+  title: Support `match_phrase` on runtime keyword expressions
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154207
+- file:
+    name: 153809.yaml
+    checksum: 47782a1c1870a3e0867e40eb215f14384820134d
+  type: bug-fix
+  title: Fix Parquet `MAP` column footer-stats crash
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153809
+- file:
+    name: 153825.yaml
+    checksum: a642be0725b14339c1bb0d917351c5cc8a16d110
+  type: bug-fix
+  title: Fix `LOOKUP JOIN` failures with empty scopes when security is enabled
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153825
+  issues:
+  - https://github.com/elastic/kibana/issues/277613
+- file:
+    name: 153785.yaml
+    checksum: 07602f4e7c2394180b08f89bc96c286fb32c9fbe
+  type: bug-fix
+  title: Fix slow re-scans when warm external dataset `COUNT` cache is evicted
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153785
+- file:
+    name: 152244.yaml
+    checksum: 12ed5c46a91a615b656dabac0a9a837e5e8e1e9c
+  type: bug-fix
+  title: Fix KNN with partially mapped fields in ES|QL
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/152244
+  issues:
+  - https://github.com/elastic/elasticsearch/issues/152196
+- file:
+    name: 154113.yaml
+    checksum: 3abd717fc9c0887c39ff498243a59a10cde89661
+  type: bug-fix
+  title: Fix Kibana change history data stream registration on serverless
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Data streams
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154113
+- file:
+    name: 154133.yaml
+    checksum: a977f994053effde56638e400023637a44232fc1
+  type: bug-fix
+  title: Fix reindex relocation failing with basic auth
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154133
+  issues:
+  - https://github.com/elastic/elasticsearch/issues/154103
+- file:
+    name: 153463.yaml
+    checksum: 51253d0a73f1656bf7360b79486758ac6f80af45
+  type: enhancement
+  title: Add ES|QL metric for split discovery phase duration
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153463
+- file:
+    name: 149605.yaml
+    checksum: 22328b1f557830a62513f8276e2c4fa078a9a219
+  type: enhancement
+  title: Expose circuit breaker memory held, limit, and estimated usage gauges
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Search
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/149605
+- file:
+    name: 153771.yaml
+    checksum: 7f78bc34efff48ab0d39b71a73b295d611e2a917
+  type: bug-fix
+  title: Fix `json_extract` execution with foldable multi-value fields
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153771
+- file:
+    name: 153675.yaml
+    checksum: 7624a4d509716631d6d0ff9f59e9249b41e874f4
+  type: bug-fix
+  title: Fix incorrect bucket placement in `BUCKET` with exponential histograms
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153675
+  issues:
+  - https://github.com/elastic/elasticsearch/issues/153270
+- file:
+    name: 154108.yaml
+    checksum: 97174f2aee024a56776487dd4bed28226d83c6fa
+  type: bug-fix
+  title: Fix non-finite averages in `aggregate_metric_double` stats when value count is zero
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154108
+- file:
+    name: 153862.yaml
+    checksum: 7be0b78ae7ea26124b41fcad4183eb462d570b4b
+  type: enhancement
+  title: Improve Painless allocation cost tracking for SQL, EQL, and ML scripts
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Infra/Scripting
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153862
+- file:
+    name: 154000.yaml
+    checksum: 28aceaee5c78c54de34c3f2c9d029d8fcdd7765d
+  type: bug-fix
+  title: Fix partial multivalue arrays when NDJSON array element coercion fails
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154000
+  issues:
+  - '# PRIVATE: https://github.com/elastic/esql-planning/issues/1157'
+- file:
+    name: 154016.yaml
+    checksum: 7d4f94a37dca7075f130a445563553c774bfa625
+  type: bug-fix
+  title: Fix missing ES|QL warnings when query execution moves to a new thread
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154016
+- file:
+    name: 153946.yaml
+    checksum: 5491a4a2703dab2ae9770a8e09ba187c45453701
+  type: enhancement
+  title: Improve performance by skipping reads when external filters remove all files
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153946
+  issues:
+  - https://github.com/elastic/elasticsearch/issues/153873
+- file:
+    name: 154094.yaml
+    checksum: 1a96901d8335d01aa29b3a68db7704a6ee2e9e4c
+  type: bug-fix
+  title: Fix `MATCH` fuzziness `ClassCastException` on version fields
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154094
+- file:
+    name: 154280.yaml
+    checksum: f563ac61a664af609b50260d9acf1fd3753f9d42
+  type: bug-fix
+  title: Fix TSDB range query scoring errors when bulk scoring extends past `maxDoc`
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - TSDB
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154280
+- file:
+    name: 153908.yaml
+    checksum: fb685a5a2c3e92bc4dfaff6575ad4d16a4065a64
+  type: bug-fix
+  title: Fix Hive partition filters dropping rows with literal `+` in values
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153908
+  issues:
+  - '# PRIVATE: https://github.com/elastic/esql-planning/issues/1274'
+- file:
+    name: 153288.yaml
+    checksum: c1f7fd1b2b0e3810b475853fa024b60c7de7c8f9
+  type: bug-fix
+  title: Fix missing field data in `FORK` branches when a field is dropped in one branch
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153288
+  issues:
+  - https://github.com/elastic/elasticsearch/issues/152843
+- file:
+    name: 153836.yaml
+    checksum: 59bacb446bc033df2b68035d81e76ed1ce06a131
+  type: bug-fix
+  title: Fix inconsistent `date` and `date_nanos` coercion for external dataset columns
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153836
+- file:
+    name: 153163.yaml
+    checksum: 15c150f32001f2913d646369b6f1d3709362549a
+  type: feature
+  title: Add `index_terms` parameter to integer field type
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Relevance
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153163
+- file:
+    name: 154327.yaml
+    checksum: 6334559df4913c408e0540afdb8338cf432e2b0b
+  type: bug-fix
+  title: Fix stateless reader heap breaker limit not updating when settings change
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Search
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154327
+- file:
+    name: 153529.yaml
+    checksum: eb11f805d18ce72c8093382857ffe316a89303b6
+  type: bug-fix
+  title: Fix version field wildcard search failures with Unicode characters
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Relevance
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153529
+- file:
+    name: 153745.yaml
+    checksum: 46a651899bdc62f01daa59e521dd2ecf0cbe2319
+  type: enhancement
+  title: Enable `match_phrase` on runtime text expressions
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153745
+- file:
+    name: 153682.yaml
+    checksum: 3ed167e73fbf9521a6625684b9adbcf5086dba80
+  type: bug-fix
+  title: Fix incorrect external dataset results from hint-blind listing cache
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153682
+- file:
+    name: 153719.yaml
+    checksum: 1d0113e79f56f5a7fe5ae2234d0c4cfdbbdf042c
+  type: enhancement
+  title: Improve Painless allocation cost tracking for math and collection types
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Infra/Scripting
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153719
+- file:
+    name: 153867.yaml
+    checksum: 328e5a406db29029c3c7c875b22168f04ea133c2
+  type: enhancement
+  title: Improve Painless allocation cost tracking for derived and inherited methods
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Infra/Scripting
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153867
+- file:
+    name: 154195.yaml
+    checksum: 6b9646522ec6135b9b5ec83f2f3a4c4c6be9e39b
+  type: bug-fix
+  title: Fix primary checkpoint updates when replica recovery is canceled
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154195
+  issues:
+  - https://github.com/elastic/elasticsearch/issues/153497
+- file:
+    name: 153715.yaml
+    checksum: cf25e1d84b6a8d31e8dbecb0d9256509d0cb10f0
+  type: enhancement
+  title: Improve single-file external dataset query performance by caching file metadata
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153715
+- file:
+    name: 153742.yaml
+    checksum: 89a1a047d1a0cd5fe9201cc49980641f48259a99
+  type: bug-fix
+  title: Fix ES|QL query failures when external-read permits are exhausted
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153742
+  issues:
+  - '# PRIVATE: https://github.com/elastic/esql-planning/issues/1146'
+- file:
+    name: 151912.yaml
+    checksum: a5c22510dbe682176e3880d62eb2e5a42f640896
+  type: enhancement
+  title: Add PromQL query logging
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Infra/Logging
+  - PromQL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/151912
+- file:
+    name: 153755.yaml
+    checksum: b65b0220db828dfc1c8c030c439f3890a75708d6
+  type: bug-fix
+  title: Fix anomaly detection job failures on reindexed results indices
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Machine learning
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153755
+- file:
+    name: 154317.yaml
+    checksum: 2dcc4eed3c4a528e61d17b1e3100e47546b04904
+  type: bug-fix
+  title: Fix `ROUND_TO` `ClassCastException` with index field expressions
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/154317
+  issues:
+  - https://github.com/elastic/elasticsearch/issues/154315
+- file:
+    name: 153866.yaml
+    checksum: d097918fffe5b451acdfbfa253a350f6207b7938
+  type: bug-fix
+  title: Fix crash casting capitalized boolean Hive partition values
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153866
+  issues:
+  - '# PRIVATE: https://github.com/elastic/esql-planning/issues/1273'
+- file:
+    name: 153523.yaml
+    checksum: af577102fa1868db0c5e38ae026fb391224caf23
+  type: bug-fix
+  title: Fix ES|QL Parquet queries returning too few rows from filter pushdown mismatches
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - ES|QL
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153523
+  issues:
+  - '# PRIVATE: https://github.com/elastic/esql-planning/issues/1155'
+- file:
+    name: 153688.yaml
+    checksum: a5f4bfcb5af8d0cf2a92c4467671b32a7a769e90
+  type: bug-fix
+  title: Fix associating an inference endpoint to an ML node deployment
+  products:
+  - product: cloud-serverless
+    target: 2026-07-21
+  - product: elasticsearch
+    target: 9.6.0
+  areas:
+  - Inference
+  prs:
+  - https://github.com/elastic/elasticsearch/pull/153688
+  issues:
+  - https://github.com/elastic/elasticsearch/issues/144860

@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Infra/Scripting
-title: Add Painless allocation annotations for x-pack allowlists
+title: Improve Painless allocation cost tracking for SQL, EQL, and ML scripts

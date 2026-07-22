@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Vector search
-title: Skip `MatchAllDocsQuery` when building KNN filter query
+title: Fix slow KNN queries when filters rewrite to match-all on constant keyword fields

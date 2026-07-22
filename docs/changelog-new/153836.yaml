@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: 'One unit rule for temporal declarations: `date` and `date_nanos` reachable from every temporal shape'
+title: Fix inconsistent `date` and `date_nanos` coercion for external dataset columns

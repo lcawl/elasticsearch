@@ -10,5 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ILM
-title: 'ILM & DLM create snapshots with `partial: true` to prevent blocking cluster recovery
-  actions'
+title: Improve ILM and DLM snapshots to avoid blocking cluster recovery

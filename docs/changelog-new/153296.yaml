@@ -10,4 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Makes ENRICH scope local to subqueries
+title: Fix `ENRICH` policy resolution scope in subqueries

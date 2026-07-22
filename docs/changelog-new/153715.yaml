@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Cache single-file metadata, skip warm probe
+title: Improve single-file external dataset query performance by caching file metadata

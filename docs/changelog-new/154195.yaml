@@ -8,4 +8,4 @@ products:
   target: 2026-07-21
 - product: elasticsearch
   target: 9.6.0
-title: Fix `ReplicationTracker` behavior when a replica recovery is canceled
+title: Fix primary checkpoint updates when replica recovery is canceled

@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: 'Separate the external dataset-aggregate cache so warm dataset COUNT stops decaying under per-file eviction'
+title: Fix slow re-scans when warm external dataset `COUNT` cache is evicted

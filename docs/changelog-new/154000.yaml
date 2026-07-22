@@ -10,4 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Null whole position on array item coercion failure
+title: Fix partial multivalue arrays when NDJSON array element coercion fails

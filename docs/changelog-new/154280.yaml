@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - TSDB
-title: 'Cap range `intoBitSet` `upTo` at `maxDoc`'
+title: Fix TSDB range query scoring errors when bulk scoring extends past `maxDoc`

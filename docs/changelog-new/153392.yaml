@@ -10,4 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Fix BUCKET with very large bucket counts
+title: Fix `BUCKET` with very large bucket counts

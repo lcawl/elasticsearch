@@ -10,4 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Fix Parquet inferred pushdown mis-pruning on unit/scale/sign mismatch
+title: Fix ES|QL Parquet queries returning too few rows from filter pushdown mismatches

@@ -10,4 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Fix off-by-one in `ZeroBucket.index()` due to rounding errors
+title: Fix incorrect bucket placement in `BUCKET` with exponential histograms

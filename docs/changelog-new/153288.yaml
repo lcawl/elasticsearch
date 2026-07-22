@@ -10,4 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: 'Materialize dropped field from one FORK branch in other branches under `unmapped_fields="load"`'
+title: "Fix missing field data in `FORK` branches when a field is dropped in one branch"

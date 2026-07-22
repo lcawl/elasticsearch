@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Add a metric for split discovery phase
+title: Add ES|QL metric for split discovery phase duration

@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Fix hint-blind external-dataset listing cache and rewrite-to-empty throw
+title: Fix incorrect external dataset results from hint-blind listing cache

@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Infra/Scripting
-title: Track Painless allocation on derived and inherited allowlist methods
+title: Improve Painless allocation cost tracking for derived and inherited methods

@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Fix MATCH fuzziness `ClassCastException` on version fields
+title: "Fix `MATCH` fuzziness `ClassCastException` on version fields"

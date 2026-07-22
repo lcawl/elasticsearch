@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Infra/Scripting
-title: Add Painless allocation annotations for `BigInteger`, `BigDecimal`, and remaining `java.util` allocators
+title: Improve Painless allocation cost tracking for math and collection types

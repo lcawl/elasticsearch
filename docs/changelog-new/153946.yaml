@@ -10,4 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Skip read when external prune removes all files
+title: Improve performance by skipping reads when external filters remove all files

@@ -293,7 +293,7 @@ rules:
 # Bundle configuration (profiles and defaults)
 bundle:
   # Input directory containing changelog YAML files
-  directory: docs/changelog
+  directory: docs/changelog-new
   # Output directory for bundled changelog files
   output_directory: docs/releases
   # Whether to resolve (copy contents) by default

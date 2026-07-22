@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Engine
-title: "Bind a declared dataset schema's columns by name, not by position"
+title: Fix swapped column values when declared dataset schema order differs from file order

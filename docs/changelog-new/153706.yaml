@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Infra/Core
-title: Enhance note on asynchronous reindexing
+title: Clarify transport timeout note for synchronous reindexing

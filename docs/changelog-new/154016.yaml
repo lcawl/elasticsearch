@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Fix one of the causes of losing warnings
+title: Fix missing ES|QL warnings when query execution moves to a new thread

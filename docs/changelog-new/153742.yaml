@@ -10,4 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Surface external-read permit exhaustion as a retryable 503
+title: Fix ES|QL query failures when external-read permits are exhausted

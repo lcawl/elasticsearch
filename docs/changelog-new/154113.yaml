@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Data streams
-title: Register change history data stream as `SystemDataStreamDescriptor`
+title: Fix Kibana change history data stream registration on serverless

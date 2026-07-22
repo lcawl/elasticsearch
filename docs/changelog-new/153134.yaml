@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: 'Show serverless GA on ES|QL function and operator docs'
+title: Update ES|QL function and operator docs to show serverless GA

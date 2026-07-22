@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Security
-title: Upgrade the version of log4j to 2.26.1
+title: Upgrade the version of `log4j` to 2.26.1

@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Relevance
-title: Improve Unicode support in `VersionFieldWildcardQuery`
+title: Fix version field wildcard search failures with Unicode characters

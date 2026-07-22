@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Search
-title: Expose per-breaker `memory.held.usage` / `memory.limit.size` / `memory.estimated.usage` gauges
+title: "Expose circuit breaker memory held, limit, and estimated usage gauges"

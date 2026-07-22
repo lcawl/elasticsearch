@@ -10,4 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: 'Read widened text columns at their reconciled type'
+title: Fix data loss when text columns widen across external dataset files

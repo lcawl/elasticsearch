@@ -10,4 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Cap and de-duplicate Parquet declared-coercion warnings
+title: Fix query failures from excessive Parquet declared-coercion warnings

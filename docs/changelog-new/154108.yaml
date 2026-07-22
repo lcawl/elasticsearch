@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: AMD fallback to average skips docs with zero value count with warning
+title: Fix non-finite averages in `aggregate_metric_double` stats when value count is zero

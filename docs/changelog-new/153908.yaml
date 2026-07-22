@@ -10,4 +10,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: "Keep literal '+' in Hive partition values"
+title: "Fix Hive partition filters dropping rows with literal `+` in values"

@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Search
-title: Add settings update consumer for stateless reader heap breaker
+title: Fix stateless reader heap breaker limit not updating when settings change

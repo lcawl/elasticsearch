@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - Machine learning
-title: "Extend anomaly detection results template for reindexed indices and generalize heal beyond `job_id` mapping"
+title: Fix anomaly detection job failures on reindexed results indices

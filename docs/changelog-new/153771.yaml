@@ -8,4 +8,4 @@ products:
   target: 9.6.0
 areas:
 - ES|QL
-title: Fix `json_extract` execution with foldable MV
+title: Fix `json_extract` execution with foldable multi-value fields
